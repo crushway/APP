@@ -7,19 +7,19 @@ return array(
 		'DB_TYPE'               =>  'mysql',     // 数据库类型
 		
 // 		服务器
-		'DB_HOST'               =>  'qdm167598103.my3w.com', // 服务器地址
-		'DB_NAME'               =>  'qdm167598103_db',          // 数据库名
-		'DB_USER'               =>  'qdm167598103',      // 用户名
-		'DB_PWD'                =>  '6124003110',          // 密码
-		'DB_PREFIX'             =>  'app_',    // 数据库表前缀
+// 		'DB_HOST'               =>  'qdm167598103.my3w.com', // 服务器地址
+// 		'DB_NAME'               =>  'qdm167598103_db',          // 数据库名
+// 		'DB_USER'               =>  'qdm167598103',      // 用户名
+// 		'DB_PWD'                =>  '6124003110',          // 密码
+// 		'DB_PREFIX'             =>  'APP_',    // 数据库表前缀
 // 		________________________________________________________
 
 // 		本地数据库
-// 		'DB_HOST'               =>  'localhost', // 服务器地址
-// 		'DB_NAME'               =>  'app',          // 数据库名
-// 		'DB_USER'               =>  'root',      // 用户名
-// 		'DB_PWD'                =>  '6124003',          // 密码
-// 		'DB_PREFIX'             =>  'app_',    // 数据库表前缀
+		'DB_HOST'               =>  'localhost', // 服务器地址
+		'DB_NAME'               =>  'app',          // 数据库名
+		'DB_USER'               =>  'root',      // 用户名
+		'DB_PWD'                =>  '6124003',          // 密码
+		'DB_PREFIX'             =>  'app_',    // 数据库表前缀
 		
 // 		________________________________________________________
 		
@@ -34,5 +34,5 @@ return array(
 		'URL_CASE_INSENSITIVE'  =>  false,   // 默认false 表示URL区分大小写 true则表示不区分大小写
 		'URL_MODEL'             =>  2,       // URL访问模式,可选参数0、1、2、3,代表以下四种模式：
 		// 0 (普通模式); 1 (PATHINFO 模式); 2 (REWRITE  模式); 3 (兼容模式)  默认为PATHINFO 模式
-		'SHOW_PAGE_TRACE'=>false,
+		'SHOW_PAGE_TRACE'=>true,
 );
