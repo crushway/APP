@@ -15,6 +15,14 @@ class UserModel extends Model {
 					'请输入用户名' 
 			),
 			array (
+					'username',
+					'',
+					'该用户名已被注册',
+					0,
+					'unique',
+					1
+			),
+			array (
 					'password',
 					'require',
 					'请输入密码' 
@@ -52,7 +60,14 @@ class UserModel extends Model {
  		
 		if ($info) {
 			if ($info ['password'] == $password) {
-				return true; // 密码正确
+				session('id',$info['id']);
+				session('username',$info['username']);
+				session('phone',$info['phone']);
+				session('user_email',$info['user_email']);
+				session('money',$info['money']);
+				define('$user_id',$info['id']);
+			    
+				return $info; // 密码正确
 			} else { // 密码错误
 				return false;
 			}
@@ -60,4 +75,23 @@ class UserModel extends Model {
 			return false;
 		}
 	}
+
+	function CheckUnique(){
+		$data=$_SERVER['HTTP_USER_AGENT'].$_SERVER['REMOTE_ADDR'].time().rand();
+		return  shal($data);
+	}
+	
+	function CheckCookie($username,$token){
+		$info=$this->getByUsername($username);
+		if($info){
+			if($info['token']==$token){
+				return true;
+			}
+			
+		}
+		
+		return false;
+	}
+	 
+	
 }

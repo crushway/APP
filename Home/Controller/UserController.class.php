@@ -12,7 +12,6 @@ class UserController extends Controller {
 	function login() {
 		// echo "用户登录" . "<br />";
 		// 测试数据
-		
 		// $_POST ['username'] = 'qing'; // 用户名
 		// $_POST ['password'] = 'qing'; // 密码
 		if (! empty ( $_POST )) {
@@ -20,24 +19,33 @@ class UserController extends Controller {
 			$user = new \Home\Model\UserModel ();
 			
 			if ($user->CheckNamePwd ( $_POST ['username'], $_POST ['password'] )) {
-				// echo "登录成功";
-				$_SESSION [username] = $_POST ['username'];
+				
+				
+				 /* $token=$user->CheckUnique();//想做cookie验证，好像不用
+				 $data['token']=$token;
+				 $user->add($data);
+				 cookie('username',$_POST ['username'],3600*24*7);
+				 cookie('token',$token,3600*24*7);
+				  */
+				
+				echo "true";
 				
 				return true; // 登录成功
 			} else {
 				// echo "验证失败";
+				echo "false";
 				return false; // 验证失败
 			}
 		}
+		echo "false";
 		
-		// echo "要提交点东西啊，你什么都没提交（POST）";
 		return false;
 	}
 	function register() {
 		
 		// 测试数据
 		
-		// $_POST ['username'] = 'qing'; // 用户名
+		// $_POST ['username'] = 'xian'; // 用户名
 		// $_POST ['password'] = 'qing'; // 密码
 		// $_POST ['password2'] = 'qing'; // 密码
 		// $_POST ['phone'] = '13580381716'; // 手机
@@ -56,15 +64,30 @@ class UserController extends Controller {
 				return false;
 			}
 			$result = $user->add ();
-			
+			session ( 'id', $result );
 			if ($result) {
 				// echo "注册成功";
+				echo "true";
 				return true;
 			} else {
+				echo "false";
 				// echo "注册失败";
 			}
 		}
-		// echo "要提交点东西啊，你什么都没提交（POST）";
+		echo "false";
+		
 		return false;
+	}
+	function testUser() {
+		if (session ( '?id' )) {
+			
+			echo session ( 'id' );
+		} else {
+			$this->error ( "测试一下", '', 5 );
+		}
+	}
+	function tuichu() {
+		unset ( $_SESSION ['id'] );
+		echo '退出成功';
 	}
 }

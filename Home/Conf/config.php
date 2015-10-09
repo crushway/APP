@@ -12,6 +12,7 @@ return array(
 // 		'DB_USER'               =>  'qdm167598103',      // 用户名
 // 		'DB_PWD'                =>  '6124003110',          // 密码
 // 		'DB_PREFIX'             =>  'APP_',    // 数据库表前缀
+// 		'SHOW_PAGE_TRACE'=>false,
 // 		________________________________________________________
 
 // 		本地数据库
@@ -20,7 +21,7 @@ return array(
 		'DB_USER'               =>  'root',      // 用户名
 		'DB_PWD'                =>  '6124003',          // 密码
 		'DB_PREFIX'             =>  'app_',    // 数据库表前缀
-		
+		'SHOW_PAGE_TRACE'=>true,
 // 		________________________________________________________
 		
 		'DB_PORT'               =>  '3306',        // 端口
@@ -31,8 +32,8 @@ return array(
 		
 		'DEFAULT_MODULE'        =>  'Home',  // 默认模块
 		'DEFAULT_ACTION'        =>  'index', // 默认操作名称
-		'URL_CASE_INSENSITIVE'  =>  false,   // 默认false 表示URL区分大小写 true则表示不区分大小写
+		'URL_CASE_INSENSITIVE'  =>  true,   // 默认false 表示URL区分大小写 true则表示不区分大小写
 		'URL_MODEL'             =>  2,       // URL访问模式,可选参数0、1、2、3,代表以下四种模式：
 		// 0 (普通模式); 1 (PATHINFO 模式); 2 (REWRITE  模式); 3 (兼容模式)  默认为PATHINFO 模式
-		'SHOW_PAGE_TRACE'=>true,
+		
 );

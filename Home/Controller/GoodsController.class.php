@@ -4,6 +4,7 @@ use Think\Controller;
 header("Content-Type:text/html;charset=utf8");
 class GoodsController extends Controller{
 	function getAllGoods(){
+// 		测试数据
 		$_POST['shop_id']=1;
 		if(isset($_POST['shop_id'])){
 			$Info=M('goods');
@@ -13,5 +14,8 @@ class GoodsController extends Controller{
 			
 
 		}
+	}
+	function _empty(){
+		echo "服务器忙";
 	}
 }

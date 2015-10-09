@@ -1,0 +1,22 @@
+[ 2015-10-05T16:24:11+08:00 ] 127.0.0.1 /home/user/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005777s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.018219s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018294s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.011377s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011544s ]
+
+[ 2015-10-05T23:04:37+08:00 ] 127.0.0.1 /home/user/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008327s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.018977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008337s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008421s ]
+

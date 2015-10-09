@@ -27,4 +27,15 @@ class ShopController extends Controller {
 		
 		 echo json_encode($modify);
 	}
+	function getShopByType(){
+// 		测试数据
+// 		$_POST['shop_type']='美食';
+		$shop=M("shop");
+		$info=$shop->where("shop_type='{$_POST['shop_type']}'")->select();
+		$data=array('data'=>$info);
+		echo json_encode($data);
+	}
+	function _empty(){
+		echo "服务器忙";
+	}
 }
